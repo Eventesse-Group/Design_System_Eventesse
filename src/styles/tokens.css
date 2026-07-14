@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap");
+
+:root {
+  color-scheme: light;
+
+  /* Primitive color tokens */
+  --eds-color-rose-50: 349 100% 97%;
+  --eds-color-rose-100: 349 90% 94%;
+  --eds-color-rose-200: 349 84% 87%;
+  --eds-color-rose-300: 349 78% 77%;
+  --eds-color-rose-400: 349 76% 67%;
+  --eds-color-rose-500: 349 78% 58%;
+  --eds-color-rose-600: 349 71% 49%;
+  --eds-color-rose-700: 349 67% 39%;
+  --eds-color-rose-800: 349 55% 31%;
+  --eds-color-rose-900: 349 44% 24%;
+  --eds-color-rose-950: 349 30% 12%;
+
+  --eds-color-teal-50: 180 80% 96%;
+  --eds-color-teal-100: 180 73% 90%;
+  --eds-color-teal-200: 180 69% 80%;
+  --eds-color-teal-300: 179 67% 66%;
+  --eds-color-teal-400: 179 73% 48%;
+  --eds-color-teal-500: 179 88% 36%;
+  --eds-color-teal-600: 179 83% 29%;
+  --eds-color-teal-700: 179 72% 24%;
+
+  --eds-color-neutral-0: 0 0% 100%;
+  --eds-color-neutral-50: 349 10% 98%;
+  --eds-color-neutral-100: 349 10% 95%;
+  --eds-color-neutral-200: 349 15% 90%;
+  --eds-color-neutral-300: 349 12% 82%;
+  --eds-color-neutral-400: 349 9% 64%;
+  --eds-color-neutral-500: 349 8% 46%;
+  --eds-color-neutral-600: 349 10% 36%;
+  --eds-color-neutral-700: 349 14% 26%;
+  --eds-color-neutral-800: 349 18% 16%;
+  --eds-color-neutral-900: 349 20% 9%;
+  --eds-color-neutral-950: 349 20% 7%;
+
+  --eds-color-red-500: 0 84% 60%;
+  --eds-color-amber-500: 38 92% 50%;
+  --eds-color-green-500: 142 76% 36%;
+  --eds-color-blue-500: 199 89% 48%;
+  --eds-color-purple-500: 262 83% 58%;
+  --eds-color-orange-500: 25 95% 53%;
+
+  /* Semantic color tokens — light */
+  --eds-background-canvas: var(--eds-color-neutral-0);
+  --eds-background-surface: var(--eds-color-neutral-0);
+  --eds-background-subtle: var(--eds-color-neutral-50);
+  --eds-background-muted: var(--eds-color-neutral-100);
+  --eds-background-brand: var(--eds-color-rose-500);
+  --eds-background-accent: var(--eds-color-teal-500);
+  --eds-background-danger: var(--eds-color-red-500);
+
+  --eds-content-primary: var(--eds-color-rose-950);
+  --eds-content-secondary: var(--eds-color-neutral-600);
+  --eds-content-disabled: var(--eds-color-neutral-400);
+  --eds-content-inverse: var(--eds-color-neutral-0);
+  --eds-content-brand: var(--eds-color-rose-600);
+  --eds-content-accent: var(--eds-color-teal-600);
+  --eds-content-danger: var(--eds-color-red-500);
+
+  --eds-border-subtle: var(--eds-color-neutral-200);
+  --eds-border-default: var(--eds-color-neutral-300);
+  --eds-border-strong: var(--eds-color-neutral-500);
+  --eds-border-brand: var(--eds-color-rose-500);
+  --eds-border-focus: var(--eds-color-rose-500);
+
+  --eds-status-success: var(--eds-color-green-500);
+  --eds-status-warning: var(--eds-color-amber-500);
+  --eds-status-error: var(--eds-color-red-500);
+  --eds-status-info: var(--eds-color-teal-500);
+
+  --eds-chart-1: var(--eds-color-rose-500);
+  --eds-chart-2: var(--eds-color-teal-500);
+  --eds-chart-3: var(--eds-color-rose-300);
+  --eds-chart-4: var(--eds-color-orange-500);
+  --eds-chart-5: var(--eds-color-purple-500);
+  --eds-chart-6: var(--eds-color-green-500);
+  --eds-chart-7: var(--eds-color-amber-500);
+  --eds-chart-8: var(--eds-color-blue-500);
+
+  /* Typography */
+  --eds-font-family-sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --eds-font-size-xs: 0.75rem;
+  --eds-font-size-sm: 0.875rem;
+  --eds-font-size-md: 1rem;
+  --eds-font-size-lg: 1.125rem;
+  --eds-font-size-xl: 1.25rem;
+  --eds-font-size-2xl: 1.5rem;
+  --eds-font-size-3xl: 1.875rem;
+  --eds-font-size-4xl: 2.25rem;
+  --eds-line-height-tight: 1.2;
+  --eds-line-height-default: 1.5;
+  --eds-line-height-relaxed: 1.625;
+  --eds-font-weight-regular: 400;
+  --eds-font-weight-medium: 500;
+  --eds-font-weight-semibold: 600;
+  --eds-font-weight-bold: 700;
+
+  /* Spacing — 4px base grid */
+  --eds-space-0: 0;
+  --eds-space-1: 0.25rem;
+  --eds-space-2: 0.5rem;
+  --eds-space-3: 0.75rem;
+  --eds-space-4: 1rem;
+  --eds-space-5: 1.25rem;
+  --eds-space-6: 1.5rem;
+  --eds-space-8: 2rem;
+  --eds-space-10: 2.5rem;
+  --eds-space-12: 3rem;
+  --eds-space-16: 4rem;
+  --eds-space-20: 5rem;
+  --eds-space-24: 6rem;
+
+  /* Shape, elevation and motion */
+  --eds-radius-none: 0;
+  --eds-radius-sm: 0.5rem;
+  --eds-radius-md: 0.75rem;
+  --eds-radius-lg: 1rem;
+  --eds-radius-xl: 1.25rem;
+  --eds-radius-full: 9999px;
+  --eds-shadow-xs: 0 1px 2px rgb(0 0 0 / 5%);
+  --eds-shadow-sm: 0 1px 3px rgb(0 0 0 / 8%), 0 1px 2px rgb(0 0 0 / 4%);
+  --eds-shadow-md: 0 8px 20px rgb(61 22 32 / 10%);
+  --eds-shadow-lg: 0 16px 36px rgb(61 22 32 / 14%);
+  --eds-duration-fast: 120ms;
+  --eds-duration-default: 200ms;
+  --eds-duration-slow: 320ms;
+  --eds-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --eds-ease-emphasized: cubic-bezier(0.2, 0, 0, 1.2);
+
+  --eds-control-height-sm: 2rem;
+  --eds-control-height-md: 2.5rem;
+  --eds-control-height-lg: 2.75rem;
+  --eds-layout-content-max: 87.5rem;
+}
+
+[data-theme="dark"],
+.dark {
+  color-scheme: dark;
+  --eds-background-canvas: var(--eds-color-neutral-950);
+  --eds-background-surface: var(--eds-color-neutral-900);
+  --eds-background-subtle: var(--eds-color-neutral-900);
+  --eds-background-muted: var(--eds-color-neutral-800);
+  --eds-background-brand: var(--eds-color-rose-500);
+  --eds-background-accent: var(--eds-color-teal-500);
+  --eds-content-primary: var(--eds-color-neutral-100);
+  --eds-content-secondary: var(--eds-color-neutral-400);
+  --eds-content-disabled: var(--eds-color-neutral-600);
+  --eds-content-brand: var(--eds-color-rose-400);
+  --eds-content-accent: var(--eds-color-teal-400);
+  --eds-border-subtle: var(--eds-color-neutral-800);
+  --eds-border-default: var(--eds-color-neutral-700);
+  --eds-border-strong: var(--eds-color-neutral-500);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
