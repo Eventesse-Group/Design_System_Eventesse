@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Brand } from "./components/Brand";
 
 const foundations = [
   ["Tokens semânticos", "Valores nomeados pela intenção de uso, com modos light e dark."],
@@ -26,6 +27,7 @@ export function App() {
       </button>
       <main className="eds-shell">
         <section className="eds-hero">
+          <Brand className="eds-brand-logo" />
           <p className="eds-kicker">Eventesse Design System · v0.1</p>
           <h1 className="eds-title">Consistência para produtos que evoluem.</h1>
           <p className="eds-lead">Uma referência compartilhada entre design e engenharia, derivada do ORB RH e preparada para uso em todos os produtos Eventesse.</p>
@@ -36,6 +38,16 @@ export function App() {
           </div>
         </section>
 
+        <section className="eds-section" aria-labelledby="brand-title">
+          <h2 id="brand-title">Marca oficial</h2>
+          <div className="eds-brand-grid">
+            <article className="eds-brand-card"><Brand /><span>Logo colorida</span></article>
+            <article className="eds-brand-card eds-brand-card-dark"><Brand tone="white" /><span>Logo branca</span></article>
+            <article className="eds-brand-card"><Brand tone="black" /><span>Logo preta</span></article>
+            <article className="eds-brand-card"><Brand kind="icon" /><span>Ícone colorido</span></article>
+            <article className="eds-brand-card eds-brand-card-dark"><Brand kind="icon" tone="white" /><span>Ícone branco</span></article>
+          </div>
+        </section>
         <section className="eds-section" aria-labelledby="principles-title">
           <h2 id="principles-title">Princípios</h2>
           <div className="eds-grid">
