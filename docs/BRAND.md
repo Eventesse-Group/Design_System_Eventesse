@@ -33,3 +33,6 @@ import { Brand } from "@eventesse/design-system";
 ```
 
 O componente usa `kind="logo"` e `tone="color"` como padrão. Não existe ícone preto oficial no pacote recebido.
+## Headers de produto
+
+Headers devem usar a logo oficial completa. Não use ícones genéricos, iniciais ou símbolos de bibliotecas como substitutos da identidade Eventesse. Quando o espaço for estritamente compacto, use o ícone oficial por meio de `kind="icon"`.

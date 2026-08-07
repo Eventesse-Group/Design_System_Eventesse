@@ -1,5 +1,9 @@
 import { useState } from "react";
+import { FileText, Home, MessageSquare, Settings, Ticket, Users } from "lucide-react";
+
 import { Brand } from "./components/Brand";
+import { ProductHeader } from "./components/ProductHeader";
+import { Sidebar } from "./components/Sidebar";
 
 const foundations = [
   ["Tokens semânticos", "Valores nomeados pela intenção de uso, com modos light e dark."],
@@ -17,6 +21,25 @@ const swatches = [
   ["Info", "var(--eds-color-blue-500)"],
 ];
 
+const navigationSections = [
+  {
+    label: "Produto",
+    items: [
+      { label: "Início", href: "#inicio", icon: <Home />, active: true },
+      { label: "Participantes", href: "#participantes", icon: <Users /> },
+      { label: "Form Builder", href: "#formularios", icon: <FileText /> },
+      { label: "Vouchers e guias", href: "#vouchers", icon: <Ticket /> },
+    ],
+  },
+  {
+    label: "Administração",
+    items: [
+      { label: "Conversas", href: "#conversas", icon: <MessageSquare />, badge: "3" },
+      { label: "Configurações", href: "#configuracoes", icon: <Settings /> },
+    ],
+  },
+];
+
 export function App() {
   const [dark, setDark] = useState(false);
 
@@ -28,7 +51,7 @@ export function App() {
       <main className="eds-shell">
         <section className="eds-hero">
           <Brand className="eds-brand-logo" />
-          <p className="eds-kicker">Eventesse Design System · v0.1</p>
+          <p className="eds-kicker">Eventesse Design System · v0.2</p>
           <h1 className="eds-title">Consistência para produtos que evoluem.</h1>
           <p className="eds-lead">Uma referência compartilhada entre design e engenharia, derivada do ORB RH e preparada para uso em todos os produtos Eventesse.</p>
           <div className="eds-row">
@@ -48,6 +71,17 @@ export function App() {
             <article className="eds-brand-card eds-brand-card-dark"><Brand kind="icon" tone="white" /><span>Ícone branco</span></article>
           </div>
         </section>
+
+        <section className="eds-section" aria-labelledby="navigation-title">
+          <h2 id="navigation-title">Header e navegação estrutural</h2>
+          <p className="eds-section-lead">A marca oficial identifica o produto; a sidebar organiza rotas e permanece sempre recolhível.</p>
+          <div className="eds-app-shell-demo">
+            <ProductHeader productName="RSVP" actions={<button className="eds-button" data-variant="secondary">Minha conta</button>} />
+            <Sidebar sections={navigationSections} />
+            <div className="eds-app-shell-content"><span>Área de conteúdo do produto</span></div>
+          </div>
+        </section>
+
         <section className="eds-section" aria-labelledby="principles-title">
           <h2 id="principles-title">Princípios</h2>
           <div className="eds-grid">
