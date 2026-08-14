@@ -1,0 +1,15 @@
+{
+  "pages": ["Foundations", "Components", "Operational patterns", "Templates"],
+  "components": [
+    { "name": "Brand", "variants": ["logo/color", "logo/white", "logo/black", "icon/color", "icon/white"] },
+    { "name": "Button", "variants": ["primary", "secondary", "ghost"] },
+    { "name": "Status Badge", "variants": ["neutral", "brand", "success", "warning", "info", "danger"] },
+    { "name": "Sidebar", "variants": ["expanded", "collapsed"] },
+    { "name": "Page Header", "variants": ["default", "with-search", "with-actions"] },
+    { "name": "Metric Strip", "variants": ["brand", "success", "warning", "info", "danger"] },
+    { "name": "Toolbar", "variants": ["default", "active-filter"] },
+    { "name": "Data Table", "variants": ["default", "grouped", "loading", "empty"] },
+    { "name": "Pagination", "variants": ["default"] },
+    { "name": "Side Panel", "variants": ["default"] }
+  ]
+}
