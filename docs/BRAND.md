@@ -36,3 +36,9 @@ O componente usa `kind="logo"` e `tone="color"` como padrão. Não existe ícone
 ## Headers de produto
 
 Headers devem usar a logo oficial completa. Não use ícones genéricos, iniciais ou símbolos de bibliotecas como substitutos da identidade Eventesse. Quando o espaço for estritamente compacto, use o ícone oficial por meio de `kind="icon"`.
+
+O nome de um produto, evento ou módulo não é uma variante da marca. Ele pode aparecer ao lado da logo oficial, mas nunca sozinho no canto superior esquerdo. Para implementação, prefira `ProductHeader` e `Sidebar`, que já preservam esse contrato.
+
+### Verificação automática
+
+Headers e sidebars devem conter exatamente um elemento `[data-eds-brand="official"]` em seu slot institucional. No estado expandido, ele deve ter `data-eds-brand-kind="logo"`; apenas sidebars recolhidas podem usar `data-eds-brand-kind="icon"`.

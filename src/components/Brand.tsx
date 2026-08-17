@@ -14,15 +14,39 @@ const brandAssets = {
   icon: { color: iconColor, white: iconWhite },
 } as const;
 
+const brandDimensions = {
+  logo: { width: 3080, height: 882 },
+  icon: {
+    color: { width: 764, height: 779 },
+    white: { width: 764, height: 882 },
+  },
+} as const;
+
 export interface BrandProps extends Omit<ImgHTMLAttributes<HTMLImageElement>, "src"> {
   kind?: BrandKind;
   tone?: BrandTone;
 }
 
-export function Brand({ kind = "logo", tone = "color", alt = "Eventesse", ...props }: BrandProps) {
+export function Brand({ kind = "logo", tone = "color", alt = "Eventesse", className = "", ...props }: BrandProps) {
   const availableTone = kind === "icon" && tone === "black" ? "color" : tone;
   const src = brandAssets[kind][availableTone as keyof (typeof brandAssets)[typeof kind]];
-  return <img src={src} alt={alt} {...props} />;
+  const dimensions = kind === "logo"
+    ? brandDimensions.logo
+    : brandDimensions.icon[availableTone as keyof typeof brandDimensions.icon];
+
+  return (
+    <img
+      {...props}
+      src={src}
+      width={dimensions.width}
+      height={dimensions.height}
+      alt={alt}
+      className={`eds-brand ${className}`.trim()}
+      data-eds-brand="official"
+      data-eds-brand-kind={kind}
+      draggable={false}
+    />
+  );
 }
 
 export { brandAssets };

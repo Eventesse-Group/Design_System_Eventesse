@@ -21,6 +21,7 @@ export interface SidebarSection {
 
 export interface SidebarProps {
   ariaLabel?: string;
+  homeHref?: string;
   sections: SidebarSection[];
   defaultCollapsed?: boolean;
   footer?: ReactNode;
@@ -28,6 +29,7 @@ export interface SidebarProps {
 
 export function Sidebar({
   ariaLabel = "Navegação principal",
+  homeHref = "/",
   sections,
   defaultCollapsed = false,
   footer,
@@ -56,7 +58,9 @@ export function Sidebar({
   return (
     <aside className="eds-sidebar" data-collapsed={collapsed}>
       <div className="eds-sidebar-header">
-        <Brand className="eds-sidebar-brand" kind={collapsed ? "icon" : "logo"} alt="Eventesse" />
+        <a className="eds-sidebar-home" href={homeHref} aria-label="Ir para o início">
+          <Brand className="eds-sidebar-brand" kind={collapsed ? "icon" : "logo"} alt="Eventesse" />
+        </a>
         <button
           className="eds-sidebar-toggle"
           type="button"
