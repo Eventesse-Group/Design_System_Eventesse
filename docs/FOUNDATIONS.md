@@ -2,7 +2,7 @@
 
 ## Identidade
 
-A identidade principal preserva o rosa Eventesse (`349 78% 58%`) para ações e marca, com teal (`179 88% 36%`) como acento funcional. DM Sans permanece como tipografia padrão.
+A identidade principal preserva o rosa Eventesse (`349 78% 58%`) para ações e marca, com teal (`179 88% 36%`) como acento funcional. A tipografia segue a pilha sans do shadcn, priorizando Inter quando disponível e usando a fonte nativa da plataforma como fallback.
 
 ## Arquitetura dos tokens
 
@@ -21,7 +21,7 @@ Exemplo:
 - Controles com alturas de 32, 40 e 44 px.
 - Raios de 8, 12, 16 e 20 px, além de circular.
 - Motion entre 120 e 320 ms, com suporte a `prefers-reduced-motion`.
-- Tipografia responsiva com DM Sans e fallback de sistema.
+- Tipografia responsiva com Inter, `ui-sans-serif` e fallback de sistema.
 
 ## Temas
 

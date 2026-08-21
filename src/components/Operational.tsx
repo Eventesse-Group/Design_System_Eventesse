@@ -1,4 +1,54 @@
-import type { HTMLAttributes, ReactNode } from "react";
+import type { ButtonHTMLAttributes, HTMLAttributes, ReactNode } from "react";
+
+export type CardVariant = "default" | "featured" | "interactive";
+
+export interface CardProps extends HTMLAttributes<HTMLElement> {
+  variant?: CardVariant;
+}
+
+export function Card({ variant = "default", className = "", children, ...props }: CardProps) {
+  return <article className={`eds-card-component eds-card-${variant} ${className}`.trim()} {...props}>{children}</article>;
+}
+
+export interface StatCardProps {
+  label: string;
+  value: string;
+  detail?: string;
+  trend?: string;
+  trendTone?: "positive" | "negative" | "neutral";
+  icon?: ReactNode;
+  variant?: Exclude<CardVariant, "interactive">;
+}
+
+export function StatCard({ label, value, detail, trend, trendTone = "neutral", icon, variant = "default" }: StatCardProps) {
+  return <Card variant={variant} className="eds-stat-card">
+    <div className="eds-stat-card-top"><span>{label}</span>{icon ? <span className="eds-stat-card-icon" aria-hidden="true">{icon}</span> : null}</div>
+    <strong>{value}</strong>
+    <div className="eds-stat-card-meta">{detail ? <small>{detail}</small> : null}{trend ? <span className={`eds-stat-trend eds-stat-trend-${trendTone}`}>{trend}</span> : null}</div>
+  </Card>;
+}
+
+export type ButtonVariant = "primary" | "secondary" | "ghost";
+
+export interface ActionButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant;
+  size?: "sm" | "md";
+  icon?: ReactNode;
+}
+
+export function ActionButton({ variant = "primary", size = "md", icon, className = "", children, ...props }: ActionButtonProps) {
+  return <button className={`eds-action-button eds-action-button-${variant} eds-action-button-${size} ${className}`.trim()} {...props}>{icon ? <span className="eds-action-button-icon" aria-hidden="true">{icon}</span> : null}{children}</button>;
+}
+
+export interface BreadcrumbItem {
+  label: string;
+  href?: string;
+  current?: boolean;
+}
+
+export function Breadcrumb({ items, label = "Breadcrumb" }: { items: BreadcrumbItem[]; label?: string }) {
+  return <nav className="eds-breadcrumb" aria-label={label}><ol>{items.map((item, index) => <li key={`${item.label}-${index}`} aria-current={item.current ? "page" : undefined}>{item.href && !item.current ? <a href={item.href}>{item.label}</a> : <span>{item.label}</span>}{index < items.length - 1 ? <span className="eds-breadcrumb-separator" aria-hidden="true">/</span> : null}</li>)}</ol></nav>;
+}
 
 export interface AppShellProps extends HTMLAttributes<HTMLDivElement> {
   sidebar: ReactNode;

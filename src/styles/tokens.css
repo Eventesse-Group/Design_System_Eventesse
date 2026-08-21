@@ -1,4 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap");
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Variable-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}
 
 :root {
   color-scheme: light;
@@ -83,7 +97,8 @@
   --eds-chart-8: var(--eds-color-blue-500);
 
   /* Typography */
-  --eds-font-family-sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* shadcn/ui-style system sans stack: compact, neutral and platform-native. */
+  --eds-font-family-sans: Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --eds-font-size-xs: 0.75rem;
   --eds-font-size-sm: 0.875rem;
   --eds-font-size-md: 1rem;
